@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imagenes</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1 class="h1-style">Galería de Imagenes</h1>
+    <div id="conteiner-form" class="conteiner-form">
+      <p class="p-style">Insertar Imagen - </p>
+      <div class="style-inputs">
+        <input id="imgURL" type="file" accept="image/*" placeholder="URL Imagen" class="input-style">
+        <input id="leyendaIMG" type="text" placeholder="Leyenda Imagen" class="input-style">
+        <button id="btnAñadir" onclick="agregarImg()" class="button" >Añadir</button>
+      </div>
+    </div>
+    <div class="conteiner-style" id="conteiner-photos">
+      <div class="style-div">
+        <img src="./img/ayrton-senna.jpg" alt="Ayrton Senna" class="img">
+        <p class="style-p">Ayrton Senna - 1988</p>
+      </div>
+      <div class="style-div">
+        <img src="./img/telsa.jpg" alt="Tesla Roadster" class="img">
+        <p class="style-p">Tesla Roadster</p>
+      </div>
+      <div class="style-div">
+        <img src="./img/bandal-guys.jpg" alt="Bandal Guys" class="img">
+        <p class="style-p">Bandal Guys</p>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./js/script.js"></script>
+</html>
