@@ -1,0 +1,20 @@
+{
+  "name": "jsts",
+  "version": "1.0.0",
+  "description": "Ejercicios de JavaScript con TypeScript",
+  "main": "script.ts",
+  "scripts": {
+    "test": "ts-node js/script.ts"
+  },
+  "author": "Geronimo Olivelli",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
