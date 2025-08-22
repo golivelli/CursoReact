@@ -1,0 +1,26 @@
+// import * as readlineSync from "readline-sync"; 
+
+// - - - - - - - - - - Modulo 9 - - - - - - - - - -
+console.log("Modulo 9");
+console.log("\n");
+
+// Actividad 1 - Botón del núcleo
+// Incluir un botón con el ID ‘btnNucleo’ manipulando el DOM. Luego, escuchar el evento click sobre el botón generado, asegurando que la función manejadora dispare una salida a elección en el HTML, cuando se presione el elemento.
+
+// Actividad 2 - Elegir Asignatura
+// Declarar un array con nombres de asignatura, y generar un select, donde los values de las etiquetas option sean la posición de la asignatura en la colección.
+// Luego, escuchar el evento change sobre el select, asegurando que la función manejadora dispare una salida en el HTML, especificando el elemento escogido por el usuario.
+
+// Actividad 3 - Alta de Estudiante
+// Crear un formulario que permita ingresar la información de un estudiante.
+// Luego, escuchar el evento submit sobre el form, capturando las entradas, e invocar un objeto Estudiante usando los valores ingresados, y asociar la instancia a un array de estudiantes.
+// Por último, disparar una salida en el HTML, a modo de confirmación de los datos registrados.
+
+// Actividad 4 - Lista Estudiantes
+// Usando el array de estudiantes creado en la actividad 3, iterar la colección creando una etiqueta div, cuya estructura interna detalle la información del estudiante, y contenga un botón ‘Seleccionar’, agregando cada estructura al body.
+// Luego, detectar el click sobre el botón, especificando al usuario los datos del alumno seleccionado.
+
+// Actividad 5 - Suspender Estudiante
+// Usando de base la interfaz generada en la actividad 4, añadir un nuevo botòn ‘Suspender’ por cada estudiante.
+// Luego, detectar el click sobre el botón, asegurando que la función manejadora identifique el objeto estudiante seleccionado, y llame a un método suspender(), disparando una salida en el HTML confirmando la suspensión del estudiante.
+

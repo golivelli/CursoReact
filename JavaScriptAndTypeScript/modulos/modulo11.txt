@@ -1,0 +1,26 @@
+// import * as readlineSync from "readline-sync"; 
+
+// - - - - - - - - - - Modulo 11 - - - - - - - - - -
+console.log("Modulo 11");
+console.log("\n");
+
+// Actividad 1 - Publicaciones
+// Solicitar el listado de publicaciones a la API JSONPlaceholder, usando una pretición AJAX (jsonplaceholder.typicode.com/posts).
+// Luego, por cada publicación obtenida, generar de forma iterativa una estructura HTML con la información, e incluirla en el DOM.
+
+// Actividad 2 - Provincias Argentinas
+// Solicitar el listado de provincias de la  Argentina a la API Georef, usando una pretición AJAX (apis.datos.gob.ar/georef/api/provincias). Luego,  generar un select donde los values de las etiquetas option sean el ID de cada provincia obtenida.
+// Por último, escuchar el evento change sobre el select, asegurando que la función manejadora dispare una salida en el HTML, especificando la provincia seleccionada.
+
+// Actividad 3 - Municipios Argentinos
+// Usando el select de provincias creado en la actividad 2, emplear el ID de la provincia seleccionada para solicitar al API Georef los municipios que le pertenecen. Por ejemplo, si el id de la provincia elegida tiene por valor ‘22’ de solicitud, es apis.datos.gob.ar/georef/api/municipios?provincia=22.
+// Luego, por cada municipio obtenido, generar de forma iterativa una estructura HTML con la información, e incluirla en el DOM.
+
+// Actividad 4 - Hogwarts
+// Solicitar el listado de estudiantes de hogwarts a la API Harry Potter, usando una pretición AJAX (hp-api.herokuapp.com/api/characters/students).
+// Luego, por cada publicación obtenida generar de forma iterativa una estructura HTML con la información, e incluirla en el DOM.
+// Por cada estudiante debe existir un botón “Seleccionar”, que al ser presionado especifique la información del estudiante en una salida animada.
+
+// Actividad 5 - Buscar Estudiantes
+// Añadir una interfaz que permita introducir una palabra, con la intención de filtrar el array de estudiantes obtenido desde la API en la actividad 4, usando la cadena ingresada.
+// Luego, actualizar la interfaz, pero sólo con la información de los estudiantes cuyo valor en la propiedad coincida con el valor ingresado en la caja de búsqueda.

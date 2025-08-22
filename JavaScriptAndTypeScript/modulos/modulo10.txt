@@ -1,0 +1,22 @@
+// import * as readlineSync from "readline-sync"; 
+
+// - - - - - - - - - - Modulo 10 - - - - - - - - - -
+console.log("Modulo 10");
+console.log("\n");
+
+// Actividad 1 - Imagen Animada
+// Incluir una imagen manipulando el DOM. Luego, realizar al menos dos animaciones encadenadas sobre la misma. Es necesario emplear  métodos de jQuery.
+
+// Actividad 2 - Banner Animado
+// Incluir una imagen y un contenedor manipulando el DOM. Luego, realizar al menos tres animaciones encadenadas sobre la imagen, y por cada  transición variar el texto del contenedor. Es necesario emplear  métodos de jQuery.
+
+// Actividad 3 - Entrada y Salida Animada
+// Incluir un input, un contenedor, y una imagen manipulando el DOM. Luego realizar una o más animaciones sobre la imagen, al detectar un cambio de valor en el input, procesando el valor ingreso, y efectuando un salida en el contenedor con el resultado. La salida mencionada debe destacarse usando una animación. Es necesario emplear  métodos de jQuery.
+
+// Actividad 4 - Interfaz Animada
+// Incluir una estructura HTML manipulando el DOM, la cual contenga al menos dos radio buttons. Luego, escuchar el evento click sobre los botones de la interfaz, y disparar diferentes animaciones por cada elemento.
+// Si las animaciones se realizan sobre la misma imagen o contenedor, se recomienda establecer un control sobre los botones, para evitar que las animaciones se superpongan. Es necesario emplear métodos de jQuery.
+
+// Actividad 5 - Cronometro Animado
+// Incluir un contenedor manipulando el DOM. El mismo debe representar un cronómetro, en el cual se modifique su contenido cada segundo, usando una animación.
+// Se recomienda crear una función con la cabecera cronometro(selector), dentro de la cual se codifiquen la lógica de modificación y animación cada ciertos segundos. Es necesario emplear  métodos de jQuery.
