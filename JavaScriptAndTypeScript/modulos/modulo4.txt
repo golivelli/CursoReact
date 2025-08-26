@@ -10,21 +10,266 @@ console.log("\n");
 // Una función procesamiento(valor), donde se transforme la entrada.
 // Una función salida(valor), la cual mostrará el resultado por alerta.
 // Luego, invocar las tres funciones.
+// console.log("Actividad 1 - Entradas y Salidas");
+
+// const entrada = (): string => {
+//   let input: string;
+
+//   do {
+//     input = readlineSync.question("Ingrese un numero: ");
+
+//     if(input.trim() == "" || isNaN(parseInt(input))) {
+//       console.log("Porfavor ingrese un número.");
+//       console.log("\n");
+//     }
+//   } while (input.trim() == "" || isNaN(parseInt(input)))
+
+//   return input;
+// }
+
+// const procesamiento = (input: string): number => {
+//   let transferToNumber: number;
+
+//   transferToNumber = parseInt(input);
+
+//   return transferToNumber;
+// } 
+
+// const salida = (input: number): void => {
+//   console.log(`Valor ingresado por el usuario: ${input}`);
+// }
+
+// let input: string = entrada();
+
+// let proce: number = procesamiento(input);
+
+// salida(proce);
 
 // Actividad 2 - Redondeo
-// Codificar una función que reciba un número decimal por parámetro, y lo retorne redondeado al entero más cercano. Para ello, puede emplearse  Math.round.
+// Codificar una función que reciba un número decimal por parámetro, y lo retorne redondeado al entero más cercano. Para ello, puede emplearse Math.round.
 // Luego invocar la función de forma iterativa cinco (5) veces, solicitando en cada ciclo un número al usuario.
+// console.log("Actividad 2 - Redondeo");
+
+// const validateNumber = (): number => {
+//   let input: string;
+//   let numberFloat : number;
+//   const regex = /^[0-9]+\.[0-9]+$/
+
+//   do {
+//     input = readlineSync.question("Ingrese un numero decimal: ");
+
+//     numberFloat = parseFloat(input);
+
+//     if (input.trim() == "" || isNaN(numberFloat) || Number.isInteger(numberFloat) === true || !regex.test(input)) {
+//       console.log("Valor inválido. Ingrese un número decimal (ejemplo: 3.14).");
+//       console.log("\n");
+//     }
+//   } while (input.trim() == "" || isNaN(numberFloat) || Number.isInteger(numberFloat) === true || !regex.test(input));
+
+//   return numberFloat;
+// }
+
+// const roundFloat = (inputFloatNumber: number): number => {
+//   let number = inputFloatNumber;
+
+//   return Math.round(number);
+// }
+
+// let listFloatNumber: number[] = [];
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(`Ciclo ${i + 1}/5`);
+//   let inputFloatNumber: number = validateNumber();
+//   let returnFloat = roundFloat(inputFloatNumber);
+
+//   listFloatNumber.push(returnFloat);
+// }
+
+// console.log("Lista de numeros decimales ingresados: " + listFloatNumber);
 
 // Actividad 3 - Impuestos
-// Codificar una función con la siguiente cabecera: impuesto (precio, porcentaje). En ella, se retorna un valor numérico compuesto por el precio recibido, más la suma del porcentaje ingresado.
+// Codificar una función con la siguiente cabecera: impuesto (precio, porcentaje). 
+// En ella, se retorna un valor numérico compuesto por el precio recibido, más la suma del porcentaje ingresado.
 // Luego invocar la función de forma iterativa cinco (5) veces, solicitando en cada ciclo un precio y porcentaje al usuario.
+// console.log("Actividad 3 - Impuestos");
+
+// const totalTax = (precio: number, porcentaje: number): number => {
+//   let totalPrice: number;
+//   let percentage = porcentaje/100;
+  
+//   totalPrice = precio * percentage;
+
+//   return totalPrice;
+// }
+
+// const setPrice = (): number => {
+//   let inputPrice: string;
+//   let price: number;
+
+//   do {
+//     inputPrice = readlineSync.question("Ingrese un precio, el cual será descontado luego: ");
+//     price = parseInt(inputPrice);
+
+//     if (inputPrice.trim() == "" || isNaN(price) || price <= 0) {
+//       console.log("Por favor ingrese un precio valido.");
+//       console.log("\n");
+//     } 
+    
+//   } while(inputPrice.trim() == "" || isNaN(price) || price <= 0);
+
+//   return price;
+// }
+
+// const setPercentage = (): number => {
+//   let inputPercentage: string;
+//   let percentage: number;
+
+//   do {
+//     inputPercentage = readlineSync.question("Ingrese un porcentaje para ser descontado del precio: ");
+//     percentage = parseInt(inputPercentage);
+
+//     if (inputPercentage.trim() == "" || isNaN(percentage) || percentage <= 0) {
+//       console.log("Por favor ingrese un porcentaje valido.");
+//       console.log("\n");
+//     } 
+    
+//   } while(inputPercentage.trim() == "" || isNaN(percentage) || percentage <= 0);
+
+//   return percentage;
+// }
+
+// let listTax: number[] = [];
+
+// for (let i = 0; i < 5; i++) {
+//   let price = setPrice();
+//   let percentage = setPercentage();
+
+//   let tax = totalTax(price, percentage);
+
+//   listTax.push(tax);
+//   console.log("\n");
+// }
+
+// console.log("Lista de impuesto a pagar: " + listTax);
 
 // Actividad 4 - Cotización
 // Codificar dos funciones:
 // Una función cotizarDolar(pesos), la cual recibe un valor monetario en pesos argentinos, y lo retorna en su equivalente en dólares.
 // Una función cotizarPesos(dolar), que recibe un valor monetario en dólares, y lo retorna en su equivalente en pesos argentinos.
-// Luego invocar las funciones solicitando  al usuario el valor y el tipo de cotización a realizar.
+// Luego invocar las funciones solicitando al usuario el valor y el tipo de cotización a realizar.
+// console.log("Actividad 4 - Cotización");
+
+// const priceUSD = (pesos: number): number => {
+//   let dolar: number = 1317; // 1 peso argentino (23-08-2025)
+//   let conversion: number = (pesos / dolar);
+
+//   return conversion;
+// }
+
+// const priceARG = (dolar: number): number => {
+//   let peso: number = 1317; // 1 dólar estadounidese (23-08-2025)
+//   let conversion: number = (dolar * peso);
+
+//   return conversion;
+// }
+
+// const setARG = (): number => {
+//   let inputPeso: string;
+//   let peso: number;
+
+//   do {
+//     inputPeso = readlineSync.question("Ingrese la cantidad de pesos argentinos(ARG) a ser cotizados (USD): ");
+//     peso = parseFloat(inputPeso);
+
+//     if (inputPeso.trim() == "" || isNaN(peso) || peso <= 0) {
+//       console.log("Por favor ingrese correctamente la cantidad de pesos (ARG) a convertir.");
+//       console.log("\n");
+//     }
+//   } while (inputPeso.trim() == "" || isNaN(peso) || peso <= 0);
+
+//   return peso;
+// }
+
+// const setUSD = (): number => {
+//   let inputDolar: string;
+//   let dolar: number;
+
+//   do {
+//     inputDolar = readlineSync.question("Ingrese la cantidad de dolares estadounidenses(USD) a ser cotizados (ARG): ");
+//     dolar = parseFloat(inputDolar);
+
+//     if (inputDolar.trim() == "" || isNaN(dolar) || dolar <= 0) {
+//       console.log("Por favor ingrese correctamente la cantidad de dolares estadonidenses(USD) a convertir.");
+//       console.log("\n");
+//     }
+//   } while (inputDolar.trim() == "" || isNaN(dolar) || dolar <= 0);
+
+//   return dolar;
+// }
+
+// const input = (): string => {
+//   const validValues: string[] = ["peso", "dolar"];
+//   let input: string;
+
+//   console.log("Por favor, ingrese lo que desea convertir. 'Peso' para cotizar dolar o 'Dolar' para cotizar pesos.");
+
+//   do {
+//     input = readlineSync.question("Ingrese lo que desea cotizar (peso - dolar): ").toLocaleLowerCase();
+    
+//     if (!validValues.includes(input) || input.trim() == "") {
+//       console.log("El valor debe ser 'peso' o 'dolar'");
+//       console.log("\n");
+//     }
+
+//   } while (input.trim() == "");
+
+//   return input;
+// }
+
+// let quoteToBeMade: string = input();
+
+// if (quoteToBeMade === "peso") {
+//   let USD: number = setUSD();
+//   let result: number = priceARG(USD);
+  
+//   console.log(`Cant. USD: ${USD}, Converción a pesos: ${result.toFixed(2)}`);
+// } else if (quoteToBeMade === "dolar") {
+//   let ARG = setARG();
+//   let result: number = priceUSD(ARG);
+  
+//   console.log(`Cant. ARG: ${ARG}, Converción a dolares: ${result.toFixed(4)}`);
+// } else {
+//   console.log("error");
+// }
 
 // Actividad 5 - Validación
 // Codificar una función con la siguiente cabecera: validacion(cadena). En ella, se retorna un valor booleano, el cual es true si el parámetro no es un cadena vacía. 
 // Caso contrario, se retorna false. Luego invocar la función de forma iterativa, hasta que el usuario tipee “ESC”, solicitando en cada ciclo una cadena a validar.
+// console.log("Actividad 5 - Validación");
+// const validation = (chain: string): boolean => {
+//   let valueBoolean: boolean = false;
+
+//   if(chain.trim() != "") {
+//     valueBoolean = true;
+//   } 
+
+//   return valueBoolean;
+// }
+
+// const setChain = (): string => {
+//   let input: string;
+
+//   input = readlineSync.question("Ingrese un valor: ").toLocaleUpperCase();
+
+//   return input;
+// }
+
+// let input: string = setChain();
+// let validate: boolean = false;
+
+// while (input != "ESC") {
+//   validate = validation(input);
+//   console.log(validate);
+
+//   input = setChain();
+// }
