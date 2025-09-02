@@ -1,22 +1,552 @@
 // import * as readlineSync from "readline-sync"; 
 
 // - - - - - - - - - - Modulo 6 - - - - - - - - - -
-console.log("Modulo 6");
-console.log("\n");
+// console.log("Modulo 6");
+// console.log("\n");
 
 // Actividad 1 - El Equipo
-// Declarar un array de cadenas, compuesto por  los cuatro (4) nombres pertenecientes a los integrantes de un equipo. Luego recorrer el array, e informar por alerta el nombre de cada jugador, así como la posición  que ocupa en la colección. 
+// Declarar un array de cadenas, compuesto por  los cuatro (4) nombres pertenecientes a los integrantes de un equipo.
+// Luego recorrer el array, e informar por alerta el nombre de cada jugador, así como la posición que ocupa en la colección.
+// console.log("Actividad 1 - El Equipo");
+// enum PropPlayer {
+//   NOMBRE = "nombre",
+//   POSICION = "posición",
+// }
+
+// const PropPlayerName = {
+//   [PropPlayer.NOMBRE]: "nombre",
+//   [PropPlayer.POSICION]: "posición",
+// }
+
+// class Jugador {
+//   nombre: string;
+//   posicion: string;
+
+//   constructor() {
+//     this.nombre = this.setProp(PropPlayer.NOMBRE);
+//     this.posicion = this.setProp(PropPlayer.POSICION);
+//   }
+
+//   private setProp(prop: PropPlayer): string {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(`Ingrese el/la ${PropPlayerName[prop]} del jugador: `);
+
+//       if (input.trim() == "" || !isNaN(parseFloat(input)) || parseInt(input) < 0) {
+//         console.log(`Por favor ingrese correctamente el/la ${PropPlayerName[prop]} del jugador.`);
+//       }
+//     } while (input.trim() == "" || !isNaN(parseFloat(input)) || parseInt(input) < 0);
+
+//     return input;
+//   }
+// }
+
+// let listPlayers: Jugador[] = [];
+// let player: Jugador;
+
+// console.log("--- CARGA DE JUGADORES ---");
+
+// for (let i = 0; i < 2; i++) {
+//   console.log(`Jugador N ${i + 1}`);
+
+//   player = new Jugador();
+//   listPlayers.push(player);
+
+//   console.log("\n");
+// }
+
+// for (const player of listPlayers) {
+//   console.log(`Nombre de jugador: ${player.nombre} \n Posición del jugador: ${player.posicion}`);
+//   console.log("\n");
+// }
 
 // Actividad 2 - Carga el Equipo
-// Declarar un array vacío, y cargarlo de forma dinámica solicitando al usuario nombres de forma consecutiva,  hasta que se ingrese “ESC”. Luego recorrer el array, e informar por alerta el nombre de cada jugador, así como la posición  que ocupa en la colección.
+// Declarar un array vacío, y cargarlo de forma dinámica solicitando al usuario nombres de forma consecutiva, hasta que se ingrese “ESC”.
+// Luego recorrer el array, e informar por alerta el nombre de cada jugador, así como la posición que ocupa en la colección.
+// console.log("Actividad 2 - Carga el Equipo");
+// const validateInput = (): string => {
+//   do {
+//     input = readlineSync.question("Si desea finalizar la carga de jugadores, ingrese 'ESC', sino ingrese alguna tecla: ").toLocaleUpperCase();
+
+//     if(input.trim() == "") {
+//       console.log("Si desea finalizar ingrese 'ESC', sino ingrese alguna tecla.");
+//     }
+//   } while (input.trim() == "");
+
+//   return input;
+// }
+
+// enum PropPlayer {
+//   NOMBRE = "nombre",
+//   POSICION = "posición",
+// }
+
+// const PropPlayerName = {
+//   [PropPlayer.NOMBRE]: "nombre",
+//   [PropPlayer.POSICION]: "posición",
+// }
+
+// class Jugador {
+//   nombre: string;
+//   posicion: string;
+
+//   constructor() {
+//     this.nombre = this.setProp(PropPlayer.NOMBRE);
+//     this.posicion = this.setProp(PropPlayer.POSICION);
+//   }
+
+//   private setProp(prop: PropPlayer): string {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(`Ingrese el/la ${PropPlayerName[prop]} del jugador: `);
+
+//       if (input.trim() == "" || !isNaN(parseFloat(input)) || parseInt(input) < 0) {
+//         console.log(`Por favor ingrese correctamente el/la ${PropPlayerName[prop]} del jugador.`);
+//       }
+//     } while (input.trim() == "" || !isNaN(parseFloat(input)) || parseInt(input) < 0);
+
+//     return input;
+//   }
+// }
+
+// let listPlayers: Jugador[] = [];
+// let player: Jugador;
+// let input: string = validateInput();
+
+// if (input && input === "ESC") {
+//   console.log("Proceso finizado.");
+// }
+
+// while (input != "ESC") {
+//   console.log("--- CARGA DE JUGADOR ---");
+
+//   player = new Jugador();
+//   listPlayers.push(player);
+
+//   console.log("\n");
+
+//   input = validateInput();
+// }
+
+// console.log("\n");
+
+// listPlayers.forEach((player, index) => {
+//   console.log(`Jugador ${index + 1}: ${player.nombre}, Posición: ${player.posicion}`);
+// });
 
 // Actividad 3 - Jugadores
-// Declarar una clase Jugador que permita registrar nombre, número de camiseta, edad, y si está lesionado. Luego instanciar al menos cinco (5) objetos usando esta clase, y asociarlos a un array.
+// Declarar una clase Jugador que permita registrar nombre, número de camiseta, edad, y si está lesionado.
+// Luego instanciar al menos cinco (5) objetos usando esta clase, y asociarlos a un array.
+// console.log("Actividad 3 - Jugadores");
+// enum PropPlayer {
+//   NOMBRE = "nombre",
+//   CAMISETA = "camiseta",
+//   EDAD = "edad",
+//   LESIONADO = "lesionado",
+// }
+
+// const PropPlayerName = {
+//   [PropPlayer.NOMBRE]: "nombre",
+//   [PropPlayer.CAMISETA]: "camiseta",
+//   [PropPlayer.EDAD]: "edad",
+//   [PropPlayer.LESIONADO]: "lesionado",
+// };
+
+// class Jugador {
+//   nombre: string;
+//   camiseta: number;
+//   edad: number;
+//   lesionado: boolean;
+
+//   constructor() {
+//     this.nombre = this.setProp(PropPlayer.NOMBRE);
+//     this.camiseta = this.setProp(PropPlayer.CAMISETA);
+//     this.edad = this.setProp(PropPlayer.EDAD);
+//     this.lesionado = this.setProp(PropPlayer.LESIONADO);
+//   }
+
+//   private setProp(prop: PropPlayer): any | undefined {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(
+//         `Ingrese el/la ${PropPlayerName[prop]} del jugador: `
+//       );
+
+//       switch (prop) {
+//         case PropPlayer.NOMBRE:
+//           if (input.trim() === "" || !isNaN(Number(input))) {
+//             console.log(
+//               `Por favor ingrese correctamente el/la ${PropPlayerName[prop]}.`
+//             );
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.CAMISETA:
+//         case PropPlayer.EDAD:
+//           if (isNaN(Number(input)) || Number(input) <= 0) {
+//             console.log(`Ingrese una ${PropPlayerName[prop]} válida.`);
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.LESIONADO:
+//           if (!["S", "N"].includes(input.toUpperCase())) {
+//             console.log("Ingrese 'S' para Sí o 'N' para No.");
+//             input = "";
+//           }
+//           break;
+//       }
+//     } while (input === "");
+
+//     if (prop === PropPlayer.EDAD) return Number(input);
+//     if (prop === PropPlayer.LESIONADO) return input.toUpperCase() === "S";
+//     return input;
+//   }
+// }
+
+// let player: Jugador;
+// let listPlayer: Jugador[] = [];
+
+// console.log("-- CARGA DE JUGADORES --");
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(`Jugador ${i + 1}`);
+//   player = new Jugador();
+//   listPlayer.push(player);
+
+//   console.log("\n");
+// };
+
+// listPlayer.forEach((Jugador, index) => {
+//   console.log(`Jugador ${index + 1} - Nombre: ${Jugador.nombre}, Camiseta: ${Jugador.camiseta}, Edad: ${Jugador.edad}, Lesionado: ${Jugador.lesionado}.`);
+// })
 
 // Actividad 4 - Buscar Jugador
-// Codificar una función con la siguiente cabecera: buscarJugador(equipo, jugador). En ella, se recibe por parámetro un array de jugadores (objetos instanciados empleando la clase de la actividad 3), y el nombre de un jugador. La función retorna el jugador que coincide con el nombre.
+// Codificar una función con la siguiente cabecera: buscarJugador(equipo, jugador).
+// En ella, se recibe por parámetro un array de jugadores (objetos instanciados empleando la clase de la actividad 3), y el nombre de un jugador.
+// La función retorna el jugador que coincide con el nombre.
 // Realizar al menos tres (3) búsquedas solicitando el nombre al usuario, e informar sobre el resultado de cada búsqueda.
+// console.log("Actividad 4 - Buscar Jugador");
+// enum PropPlayer {
+//   NOMBRE = "nombre",
+//   CAMISETA = "camiseta",
+//   EDAD = "edad",
+//   EQUIPO = "equipo",
+//   LESIONADO = "lesionado",
+// }
+
+// const PropPlayerName = {
+//   [PropPlayer.NOMBRE]: "nombre",
+//   [PropPlayer.CAMISETA]: "camiseta",
+//   [PropPlayer.EDAD]: "edad",
+//   [PropPlayer.EQUIPO]: "equipo",
+//   [PropPlayer.LESIONADO]: "lesionado",
+// };
+
+// const playerToSearch = (): string => {
+//   let input: string;
+
+//   do {
+//     input = readlineSync.question(
+//       "Ingrese el nombre del jugador a ser buscado: "
+//     );
+
+//     if (
+//       input.trim() == "" ||
+//       !isNaN(parseInt(input)) ||
+//       !isNaN(parseFloat(input))
+//     ) {
+//       console.log("Por favor ingrese un nombre de jugador.");
+//       console.log("\n");
+//     }
+//   } while (
+//     input.trim() == "" ||
+//     !isNaN(parseInt(input)) ||
+//     !isNaN(parseFloat(input))
+//   );
+
+//   return input;
+// };
+
+// const loadPlayers = (): number => {
+//   let input: string;
+//   let cantPlayers: number;
+
+//   do {
+//     input = readlineSync.question(
+//       "Ingrese la cantidad de jugadores a ingresar: "
+//     );
+//     cantPlayers = parseInt(input);
+
+//     if (input.trim() == "" || isNaN(cantPlayers) || cantPlayers < 0) {
+//       console.log(
+//         "Por favor ingrese una cantidad numerica de jugadores a ser ingresados."
+//       );
+//       console.log("\n");
+//     }
+//   } while (input.trim() == "" || isNaN(cantPlayers) || cantPlayers < 0);
+
+//   return cantPlayers;
+// };
+
+// const searchPlayer = (equipo: Jugador[], jugador: string): Jugador | null => {
+//   return equipo.find((equipo) => equipo.nombre == jugador) || null;
+// };
+
+// class Jugador {
+//   nombre: string;
+//   camiseta: number;
+//   edad: number;
+//   equipo: string;
+//   lesionado: boolean;
+
+//   constructor() {
+//     this.nombre = this.setProp(PropPlayer.NOMBRE);
+//     this.camiseta = this.setProp(PropPlayer.CAMISETA);
+//     this.edad = this.setProp(PropPlayer.EDAD);
+//     this.equipo = this.setProp(PropPlayer.EQUIPO);
+//     this.lesionado = this.setProp(PropPlayer.LESIONADO);
+//   }
+
+//   private setProp(prop: PropPlayer): any {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(
+//         `Ingrese el/la ${PropPlayerName[prop]} del jugador: `
+//       );
+
+//       switch (prop) {
+//         case PropPlayer.NOMBRE:
+//         case PropPlayer.EQUIPO:
+//           if (input.trim() === "" || !isNaN(Number(input))) {
+//             console.log(
+//               `Por favor ingrese correctamente el/la ${PropPlayerName[prop]}.`
+//             );
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.CAMISETA:
+//         case PropPlayer.EDAD:
+//           if (isNaN(Number(input)) || Number(input) <= 0) {
+//             console.log(`Ingrese una ${PropPlayerName[prop]} válida.`);
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.LESIONADO:
+//           if (!["S", "N"].includes(input.toUpperCase())) {
+//             console.log("Ingrese 'S' para Sí o 'N' para No.");
+//             input = "";
+//           }
+//           break;
+//       }
+//     } while (input === "");
+
+//     if (prop === PropPlayer.EDAD) return Number(input);
+//     if (prop === PropPlayer.LESIONADO) return input.toUpperCase() === "S";
+//     return input;
+//   }
+// }
+
+// let player: Jugador;
+// let listPlayers: Jugador[] = [];
+// let cantPlayers: number = loadPlayers();
+// let find: Jugador | null;
+
+// for (let i = 0; i < cantPlayers; i++) {
+//   console.log(`Jugador ${i + 1}`);
+//   player = new Jugador();
+//   listPlayers.push(player);
+
+//   console.log("\n");
+// }
+
+// let playerToFind: string;
+
+// for (let i = 0; i < 3; i++) {
+//   playerToFind = playerToSearch();
+//   find = searchPlayer(listPlayers, playerToFind);
+
+//   if (find) {
+//     console.log("- Jugador encontrado -");
+//     console.log(`Nombre: ${find.nombre}`);
+//     console.log(`Camiseta: ${find.camiseta}`);
+//     console.log(`Edad: ${find.edad}`);
+//     console.log(`Equipo: ${find.equipo}`);
+//     console.log(`Lesionado: ${find.lesionado ? "Sí" : "No"}`);
+//     console.log("\n");
+//   } else {
+//     console.log("Jugador no encontrado.");
+//   }
+// }
 
 // Actividad 5 - Filtrar Jugadores
-// Codificar una función con la siguiente cabecera: filtroJugadores(equipo, edad). En ella, se recibe un array de jugadores (objetos instanciados empleando la clase de la actividad 3), y una edad. La función retorna los jugadores cuya edad coincide con el segundo parámetro.
+// Codificar una función con la siguiente cabecera: filtroJugadores(equipo, edad). En ella, se recibe un array de jugadores (objetos instanciados empleando la clase de la actividad 3),
+// y una edad. La función retorna los jugadores cuya edad coincide con el segundo parámetro.
 // Realizar al menos cinco (5) filtros solicitando la edad al usuario, e informar sobre el resultado de los jugadores filtrados.
+// console.log("Actividad 5 - Filtar Jugadores");
+// enum PropPlayer {
+//   NOMBRE = "nombre",
+//   CAMISETA = "camiseta",
+//   EDAD = "edad",
+//   EQUIPO = "equipo",
+//   LESIONADO = "lesionado",
+// }
+
+// const PropPlayerName = {
+//   [PropPlayer.NOMBRE]: "nombre",
+//   [PropPlayer.CAMISETA]: "camiseta",
+//   [PropPlayer.EDAD]: "edad",
+//   [PropPlayer.EQUIPO]: "equipo",
+//   [PropPlayer.LESIONADO]: "lesionado",
+// };
+
+// const filterPlayerForAge = (): number => {
+//   let input: string;
+//   let inputNumber: number;
+
+//   do {
+//     input = readlineSync.question(
+//       "Ingrese la edad maxima de los jugadores a ser filtrados: "
+//     );
+//     inputNumber = parseInt(input);
+
+//     if (input.trim() == "" || inputNumber <= 0 || isNaN(inputNumber)) {
+//       console.log("Por favor ingrese una edad valida de tipo numerica.");
+//       console.log("\n");
+//     }
+//   } while (input.trim() == "" || inputNumber <= 0 || isNaN(inputNumber));
+
+//   return inputNumber;
+// };
+
+// const loadPlayers = (): number => {
+//   let input: string;
+//   let cantPlayers: number;
+
+//   do {
+//     input = readlineSync.question(
+//       "Ingrese la cantidad de jugadores a ingresar: "
+//     );
+//     cantPlayers = parseInt(input);
+
+//     if (input.trim() == "" || isNaN(cantPlayers) || cantPlayers < 0) {
+//       console.log(
+//         "Por favor ingrese una cantidad numerica de jugadores a ser ingresados."
+//       );
+//       console.log("\n");
+//     }
+//   } while (input.trim() == "" || isNaN(cantPlayers) || cantPlayers < 0);
+
+//   return cantPlayers;
+// };
+
+// const filterPlayers = (equipo: Jugador[], edad: number): Jugador[] | null => {
+//   let filterPlayers: Jugador[] = equipo.filter(
+//     (jugador) => jugador.edad === edad
+//   );
+
+//   if (filterPlayers.length === 0) {
+//     return null;
+//   } else {
+//     return filterPlayers;
+//   }
+// };
+
+// class Jugador {
+//   nombre: string;
+//   camiseta: number;
+//   edad: number;
+//   equipo: string;
+//   lesionado: boolean;
+
+//   constructor() {
+//     this.nombre = this.setProp(PropPlayer.NOMBRE);
+//     this.camiseta = this.setProp(PropPlayer.CAMISETA);
+//     this.edad = this.setProp(PropPlayer.EDAD);
+//     this.equipo = this.setProp(PropPlayer.EQUIPO);
+//     this.lesionado = this.setProp(PropPlayer.LESIONADO);
+//   }
+
+//   private setProp(prop: PropPlayer): any {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(
+//         `Ingrese el/la ${PropPlayerName[prop]} del jugador: `
+//       );
+
+//       switch (prop) {
+//         case PropPlayer.NOMBRE:
+//         case PropPlayer.EQUIPO:
+//           if (input.trim() === "" || !isNaN(Number(input))) {
+//             console.log(
+//               `Por favor ingrese correctamente el/la ${PropPlayerName[prop]}.`
+//             );
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.CAMISETA:
+//         case PropPlayer.EDAD:
+//           if (isNaN(Number(input)) || Number(input) <= 0) {
+//             console.log(`Ingrese una ${PropPlayerName[prop]} válida.`);
+//             input = "";
+//           }
+//           break;
+
+//         case PropPlayer.LESIONADO:
+//           if (!["S", "N"].includes(input.toUpperCase())) {
+//             console.log("Ingrese 'S' para Sí o 'N' para No.");
+//             input = "";
+//           }
+//           break;
+//       }
+//     } while (input === "");
+
+//     if (prop === PropPlayer.EDAD) return Number(input);
+//     if (prop === PropPlayer.LESIONADO) return input.toUpperCase() === "S";
+//     return input;
+//   }
+// }
+
+// let player: Jugador;
+// let listPlayers: Jugador[] = [];
+// let cantPlayers: number = loadPlayers();
+
+// for (let i = 0; i < cantPlayers; i++) {
+//   console.log(`Jugador ${i + 1}`);
+//   player = new Jugador();
+//   listPlayers.push(player);
+
+//   console.log("\n");
+// }
+
+// let agePlayersFilters: number;
+// let playerFilters: Jugador[] | null;
+
+// for (let i = 0; i < 5; i++) {
+//   agePlayersFilters = filterPlayerForAge();
+//   playerFilters = filterPlayers(listPlayers, agePlayersFilters);
+
+//   if (playerFilters) {
+//     playerFilters.forEach((p) => {
+//       console.log(`
+//         - Jugador encontrado -
+//         Nombre: ${p.nombre}
+//         Camiseta: ${p.camiseta}
+//         Edad: ${p.edad}
+//         Equipo: ${p.equipo}
+//         Lesionado: ${p.lesionado ? "Sí" : "No"}
+//       `);
+//     });
+//   } else {
+//     console.log("Jugadores no encontrados.");
+//   }
+// }

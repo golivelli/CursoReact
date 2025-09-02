@@ -1,8 +1,8 @@
 // import * as readlineSync from "readline-sync"; 
 
 // - - - - - - - - - - Modulo 5 - - - - - - - - - -
-console.log("Modulo 5");
-console.log("\n");
+// console.log("Modulo 5");
+// console.log("\n");
 
 // Actividad 1 - La Tienda
 // Declarar un clase Tienda que permita registrar:
@@ -11,21 +11,461 @@ console.log("\n");
 // Propietario de la tienda.
 // Rubro de la tienda.
 // Luego invocar al menos tres (3) objetos usando esta clase.
+// console.log("Actividad 1 - La Tienda");
+// class Tienda {
+//   name: string;
+//   address: string;
+//   owner: string;
+//   category: string;
+
+//   constructor (nombre: string, direccion: string, propietario: string, rubro: string) {
+//     this.name = nombre;
+//     this.address = direccion;
+//     this.owner = propietario;
+//     this.category = rubro;
+//   }
+// }
+
+// let store1 = new Tienda("Maxikiosco Juma&Jo", "Av. Brig. Gral. Juan Manuel de Rosas 2403, B1754 San Justo, Provincia de Buenos Aires", "Claudio Romero", "Comercio");
+// let store2 = new Tienda("Servies Limpieza", "Bartolomé Podio 54, S2300 Rafaela, Santa Fe", "Nicolas Crotti", "Comercio");
+// let store3 = new Tienda("Organizacion Olivelli", "Av. Brig. Gral. Juan Manuel de Rosas 2421, B1754 San Justo, Provincia de Buenos Aires", "Victor Olivelli", "Servicio");
+
+// console.log("Tienda 1 - " + "Nombre: " + store1.name + ", " + "Direccion: " + store1.address + ", " + "Propietario: " + store1.owner + ", " + "Rubro:" + store1.category);
+// console.log("\n");
+// console.log("Tienda 2 - " + "Nombre: " + store2.name + ", " + "Direccion: " + store2.address + ", " + "Propietario: " + store2.owner + ", " + "Rubro:" + store2.category);
+// console.log("\n");
+// console.log("Tienda 3 - " + "Nombre: " + store3.name + ", " + "Direccion: " + store3.address + ", " + "Propietario: " + store3.owner + ", " + "Rubro:" + store3.category);
 
 // Actividad 2 - Registo de Tiendas
 // Solicitar al usuario el registro de cinco (5) tiendas.
 // Emplear la clase Tienda de la actividad 1, para instanciar los objetos en función de las entradas capturadas. Generar una única salida compuesta por la información de los objetos instanciados.
+// console.log("Actividad 2 - Registro de Tiendas");
+
+// enum TiendaProp {
+//   NAME = "name",
+//   ADDRESS = "address",
+//   OWNER = "owner",
+//   CATEGORY = "category",
+// }
+
+// const TiendaPropNames = {
+//   [TiendaProp.NAME]: "nombre",
+//   [TiendaProp.ADDRESS]: "dirección",
+//   [TiendaProp.OWNER]: "dueño",
+//   [TiendaProp.CATEGORY]: "categoría",
+// };
+
+// class Tienda {
+//   name: string;
+//   address: string;
+//   owner: string;
+//   category: string;
+
+//   constructor() {
+//     this.name = this.setProp(TiendaProp.NAME);
+//     this.address = this.setProp(TiendaProp.ADDRESS);
+//     this.owner = this.setProp(TiendaProp.OWNER);
+//     this.category = this.setProp(TiendaProp.CATEGORY);
+//   }
+
+//   private setProp(prop: TiendaProp): string {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(`Ingrese el valor de ${TiendaPropNames[prop]}: `);
+
+//       if (
+//         input.trim() == "" ||
+//         !isNaN(parseInt(input)) ||
+//         !isNaN(parseFloat(input))
+//       ) {
+//         console.log(
+//         `Por favor ingrese correctamente el/la ${TiendaPropNames[prop]}.`
+//         );
+//         console.log("\n");
+//       }
+//     } while (
+//       input.trim() == "" ||
+//       !isNaN(parseInt(input)) ||
+//       !isNaN(parseFloat(input))
+//     );
+
+//     return input;
+//   }
+// }
+
+// let listStore: Tienda[] = [];
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(`Tienda - ${i + 1}/5`);
+
+//   let store = new Tienda();
+
+//   console.log("\n");
+
+//   listStore.push(store);
+// }
+
+// for (const store of listStore) {
+//   console.log(
+//     `- Datos de la tienda - \n Nombre tienda: ${store.name} \n Direccion: ${store.address} \n Dueño: ${store.owner} \n Category: ${store.category}`
+//   );
+// }
 
 // Actividad 3 - Abierto y Cerrado
 // Declarar un método para la clase Tienda con la siguiente cabecera estaAbierto(hora). Este retorna true si la hora enviada está entre las 08 y 12, o entre las 15 y 19. Caso contrario, se retorna false.
 // Luego invocar al menos un (1) objeto usando esta clase, y solicitar al usuario tres (3) horas. Informar por alerta si la tienda está abierta, en función de la hora ingresada.
+// console.log("Actividad 3 - Abierto y Cerrado");
+
+// enum TiendaProp {
+//   NAME = "name",
+//   ADDRESS = "address",
+//   OWNER = "owner",
+//   CATEGORY = "category",
+// }
+
+// const TiendaPropNames = {
+//   [TiendaProp.NAME]: "nombre",
+//   [TiendaProp.ADDRESS]: "dirección",
+//   [TiendaProp.OWNER]: "dueño",
+//   [TiendaProp.CATEGORY]: "categoría",
+// };
+
+// class Tienda {
+//   name: string;
+//   address: string;
+//   owner: string;
+//   category: string;
+
+//   constructor() {
+//     this.name = this.setProp(TiendaProp.NAME);
+//     this.address = this.setProp(TiendaProp.ADDRESS);
+//     this.owner = this.setProp(TiendaProp.OWNER);
+//     this.category = this.setProp(TiendaProp.CATEGORY);
+//   }
+
+//   private setProp(prop: TiendaProp): string {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(`Ingrese el valor de ${TiendaPropNames[prop]}: `);
+
+//       if (
+//         input.trim() == "" ||
+//         !isNaN(parseInt(input)) ||
+//         !isNaN(parseFloat(input))
+//       ) {
+//         console.log(
+//         `Por favor ingrese correctamente el/la ${TiendaPropNames[prop]}.`
+//         );
+//         console.log("\n");
+//       }
+//     } while (
+//       input.trim() == "" ||
+//       !isNaN(parseInt(input)) ||
+//       !isNaN(parseFloat(input))
+//     );
+
+//     return input;
+//   }
+
+//   public consultOpen(): number {
+//     let input: number;
+
+//     do {
+//       input = parseInt(readlineSync.question(`Ingrese el horario a consultar: `));
+
+//       if (
+//         input < 0 ||
+//         isNaN(input)
+//       ) {
+//         console.log(
+//         `Por favor ingrese correctamente el horario a consultar.`
+//         );
+//         console.log("\n");
+//       }
+//     } while (
+//       input < 0 ||
+//       isNaN(input)
+//     );
+
+//     return input;
+//   }
+
+//   public isOpen(hour: number): boolean {
+//     let open: boolean = false;
+
+//     if ((hour >= 8 && hour <= 12) || (hour >= 15 && hour <= 19)){
+//       open = true;
+//       return open;
+//     } else {
+//       return open;
+//     }
+//   }
+// }
+
+// let store = new Tienda();
+
+// console.log("\n");
+
+// for (let i = 0; i < 3; i++) {
+//   let hour: number;
+
+//   hour = store.consultOpen();
+//   console.log(store.isOpen(hour));
+// }
 
 // Actividad 4 - Validar Propietario
-// Declarar un método para la clase Tienda con la siguiente cabecera esPropietario(nombre). Se retorna true si el nombre enviado corresponde al propietario de la tienda.Caso contrario, se retorna false.
+// Declarar un método para la clase Tienda con la siguiente cabecera esPropietario(nombre). Se retorna true si el nombre enviado corresponde al propietario de la tienda. Caso contrario, se retorna false.
 // Luego, invocar al menos tres(3) objetos usando esta clase y solicitar al usuario cinco(5) nombres. Informar por alerta si los nombres pertenecen a algún dueño de tienda.
+// console.log("Actividad 4 - Validar Propietario");
 
-// Actividad 5 - El Cliente
+// enum TiendaProp {
+//   NAME = "name",
+//   ADDRESS = "address",
+//   OWNER = "owner",
+//   CATEGORY = "category",
+// }
+
+// const TiendaPropNames = {
+//   [TiendaProp.NAME]: "nombre",
+//   [TiendaProp.ADDRESS]: "dirección",
+//   [TiendaProp.OWNER]: "dueño",
+//   [TiendaProp.CATEGORY]: "categoría",
+// };
+
+// class Tienda {
+//   name: string;
+//   address: string;
+//   owner: string;
+//   category: string;
+
+//   constructor() {
+//     this.name = this.setProp(TiendaProp.NAME);
+//     this.address = this.setProp(TiendaProp.ADDRESS);
+//     this.owner = this.setProp(TiendaProp.OWNER);
+//     this.category = this.setProp(TiendaProp.CATEGORY);
+//   }
+
+//   private setProp(prop: TiendaProp): string {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(
+//         `Ingrese el valor de ${TiendaPropNames[prop]}: `
+//       );
+
+//       if (
+//         input.trim() == "" ||
+//         !isNaN(parseInt(input)) ||
+//         !isNaN(parseFloat(input))
+//       ) {
+//         console.log(
+//           `Por favor ingrese correctamente el/la ${TiendaPropNames[prop]}.`
+//         );
+//         console.log("\n");
+//       }
+//     } while (
+//       input.trim() == "" ||
+//       !isNaN(parseInt(input)) ||
+//       !isNaN(parseFloat(input))
+//     );
+
+//     return input;
+//   }
+
+//   public isOwner(possibleOwner: string): boolean {
+//     return possibleOwner === this.owner;
+//   }
+// }
+
+// let store: Tienda;
+// let listStore: Tienda[] = [];
+
+// for (let i = 0; i < 2; i++) {
+//   console.log(`-- Ingreso de datos ---`);
+//   console.log(`Tienda N° ${i + 1}`);
+
+//   store = new Tienda();
+//   listStore.push(store);
+
+//   console.log("\n");
+// }
+
+// for (let i = 0; i < 3; i++) {
+//   let input: string;
+
+//   do {
+//     input = readlineSync.question("Ingrese un nombre: ");
+
+//     if (
+//       input.trim() == "" ||
+//       !isNaN(parseInt(input)) ||
+//       !isNaN(parseFloat(input))
+//     ) {
+//       console.log("Por favor ingrese un nombre correctamente.");
+//       console.log("\n");
+//     }
+//   } while (
+//     input.trim() == "" ||
+//     !isNaN(parseInt(input)) ||
+//     !isNaN(parseFloat(input))
+//   );
+
+//   let found = false;
+
+//   for (const tienda of listStore) {
+//     if (tienda.isOwner(input) == true) {
+//       console.log(input + " es propietario de la tienda: " + tienda.name);
+//       found = true;
+//       break;
+//     }
+//   }
+
+//   if (!found) {
+//     console.log("El nombre indicado no pertenece a ningún dueño");
+//   }
+// }
+
+// Actividad 5 - El Cliente (Modulo - 5)
 // Declarar una clase Cliente que permita registrar:
 // Registrar nombre, presupuesto, si tiene tarjeta de descuento, y número de teléfono del cliente.
 // Un método transferirDinero(valor), que permita  obtener y restar cierta cantidad del presupuesto, siempre que este parámetro sea menor al valor enviado, y mayor que cero.
-// Luego invocar al menos tres (3) objetos usando esta clase, y solicitar al usuario cinco (5) números. Informar por alerta si cada uno de los clientes cuenta con el presupuesto suficiente para realizar una transferencia de igual monto al ingresado.
+// Luego invocar al menos tres (3) objetos usando esta clase, y solicitar al usuario cinco (5) números. 
+// Informar por alerta si cada uno de los clientes cuenta con el presupuesto suficiente para realizar una transferencia de igual monto al ingresado.
+// console.log("Actividad 5 - El Cliente");
+// enum ClientProp {
+//   NOMBRE = "nombre",
+//   PRESUPUESTO = "presupuesto",
+//   TELEFONO = "telefono",
+//   DESCUENTO = "descuento",
+// }
+
+// const ClientPropNames = {
+//   [ClientProp.NOMBRE]: "nombre",
+//   [ClientProp.PRESUPUESTO]: "presupuesto",
+//   [ClientProp.TELEFONO]: "telefono",
+//   [ClientProp.DESCUENTO]: "desecuento",
+// };
+
+// class Client {
+//   nombre: string;
+//   presupuesto: number;
+//   telefono: string;
+//   descuento: boolean;
+
+//   constructor() {
+//     this.nombre = this.setProp(ClientProp.NOMBRE);
+//     this.presupuesto = this.setProp(ClientProp.PRESUPUESTO);
+//     this.telefono = this.setProp(ClientProp.TELEFONO);
+//     this.descuento = this.setProp(ClientProp.DESCUENTO);
+//   }
+
+//   private setProp = (prop: ClientProp): any => {
+//     let input: string;
+
+//     do {
+//       input = readlineSync.question(
+//         `Ingrese el ${ClientPropNames[prop]} del cliente: `
+//       );
+
+//       switch (prop) {
+//         case ClientProp.NOMBRE:
+//           if (input.trim() === "" || !isNaN(Number(input))) {
+//             console.log(
+//               `Por favor ingrese correctamente el ${ClientPropNames[prop]}.`
+//             );
+//             input = "";
+//           }
+//           break;
+//         case ClientProp.TELEFONO:
+//           if (!/^\d+$/.test(input)) {
+//             console.log("Ingrese un número de teléfono válido.");
+//             input = "";
+//           }
+
+//         case ClientProp.PRESUPUESTO:
+//           if (isNaN(Number(input)) || Number(input) <= 0) {
+//             console.log(`Ingrese un ${ClientPropNames[prop]} válido.`);
+//             input = "";
+//           }
+//           break;
+
+//         case ClientProp.DESCUENTO:
+//           if (!["S", "N"].includes(input.toUpperCase())) {
+//             console.log("Ingrese 'S' para Sí o 'N' para No.");
+//             input = "";
+//           }
+//           break;
+//       }
+//     } while (input === "");
+
+//     if (prop === ClientProp.PRESUPUESTO) return Number(input);
+//     if (prop === ClientProp.DESCUENTO) return input.toUpperCase() === "S";
+//     return input;
+//   };
+
+//   public transferMoney = (value: number): void => {
+//     if (this.presupuesto >= value && value > 0) {
+//       this.presupuesto = this.presupuesto - value;
+//       console.log(
+//         `Monto enviado: ${value} - Saldo Actualizado: ${this.presupuesto}`
+//       );
+//     } else {
+//       console.log(
+//         "Error en la transferencia. Valor a tranferir mayor a saldo en cuenta."
+//       );
+//     }
+//   };
+// }
+
+// const validateValueTransfer = (): number => {
+//   let input: string;
+//   let valueInput: number;
+
+//   do {
+//     input = readlineSync.question("Ingrese valor a ser transferido: ");
+//     valueInput = parseInt(input);
+
+//     if (input.trim() == "" || valueInput <= 0 || isNaN(valueInput)) {
+//       console.log(
+//         "Por favor ingresa correctamente el valor a ser transferido."
+//       );
+//     }
+//   } while (input.trim() == "" || valueInput <= 0 || isNaN(valueInput));
+
+//   return valueInput;
+// };
+
+// let client: Client;
+// let listClient: Client[] = [];
+
+// console.log("-- INGRESO DE CLIENTES ---");
+// for (let i = 0; i < 3; i++) {
+//   console.log(`Cliente ${i + 1}`);
+//   client = new Client();
+//   listClient.push(client);
+
+//   console.log("\n");
+// }
+
+// console.log("--- INGRESO DE VALORES A TRANSFERIR ---");
+// let valueTransfer: number;
+// for (let i = 0; i < 5; i++) {
+//   valueTransfer = validateValueTransfer();
+
+//   if (listClient.filter((client) => client.presupuesto > valueTransfer)) {
+//     listClient.forEach((p) => {
+//       if (p.presupuesto >= valueTransfer) {
+//         console.log(
+//           `El cliente ${p.nombre} cuenta con el presupuesto suficiente para transferir ${valueTransfer}.`
+//         );
+//         p.transferMoney(valueTransfer);
+//       } else {
+//         console.log(
+//           `El cliente ${p.nombre} 'NO' tiene suficiente presupuesto para transferir ${valueTransfer}.`
+//         );
+//       }
+//     });
+//   }
+// }
